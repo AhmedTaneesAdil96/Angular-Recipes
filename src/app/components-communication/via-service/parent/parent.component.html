@@ -1,0 +1,23 @@
+<div class="container-fluid" style="background-color: aliceblue">
+  <div class="row">
+    <div class="col-lg-3 col-6 mt-4" style="background-color: aliceblue">
+      <h3>Parent Component</h3>
+      <input type="text" [formControl]="messageForm" />
+      <button
+        type="button"
+        class="btn btn-primary btn-sm ms-4"
+        (click)="sendDataToChild()"
+      >
+        send
+      </button>
+      <p>
+        <strong>Message From Parent Component via service: </strong
+        >{{ messageFromChild }}
+      </p>
+    </div>
+
+    <div class="col-lg-9 col-6">
+      <app-child></app-child>
+    </div>
+  </div>
+</div>
