@@ -12,6 +12,13 @@ const routes: Routes = [
         './components-communication/input-output/parent/parent.module'
       ).then((m) => m.ParentModule),
   },
+  {
+    path: 'components-communication-via-service',
+    loadChildren: () =>
+      import(
+        './components-communication/via-service/parent/parent.module'
+      ).then((m) => m.ParentModule),
+  },
 ];
 
 @NgModule({
